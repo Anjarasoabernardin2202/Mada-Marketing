@@ -1,0 +1,89 @@
+.demo-filter-color {
+    background-image: linear-gradient(0deg,#f4f5f9,#f4f5f9,#f4f5f9,#f4f5f9,#fff);
+}
+.feturebox-section{
+    .icon-wrapper{
+        &:hover{
+            transform: translate3d(0,-3px,0);
+        }
+    }
+}
+
+.features-elements {
+    .feature-box {
+        transition: var(--default-transition);
+
+        &.feature-box-shadow {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            transition: var(--default-transition);
+
+            .feature-box-overlay {
+                transition: var(--default-transition);
+                @apply absolute top-0 left-0 w-full h-full  bg-[#4c505f];
+                z-index: -1;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+                opacity: 0;
+            }
+
+            .feature-box-icon {
+                i {
+                    transition: var(--default-transition);
+                }
+            }
+            .feature-box-content {
+                span {
+                    transition: var(--default-transition);
+                }
+            }
+
+            &:hover {
+                border-color: transparent;
+                transform: translate3d(0, -3px, 0);
+
+                .feature-box-icon {
+                    i {
+                        @apply text-white z-[1];
+                    }
+                }
+
+                .feature-box-content {
+                    span {
+                        @apply text-white z-[1];
+                    }
+                }
+
+                .feature-box-overlay {
+                    opacity: 1;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+// Custom Icon With Text
+.landing-custom-iconwithtext {
+    .custom-icon-with-text01 {
+        padding: 25px 2rem;
+        .title {
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}
+
+.demo-filter{
+    .filter-menu{
+            span {
+                border: none;
+            }
+        }
+}
+
+.unique-demos{
+    .portfolio-content {
+        padding-top: 15px;
+        padding-bottom: 0;
+        font-size: 13px;
+    }
+}

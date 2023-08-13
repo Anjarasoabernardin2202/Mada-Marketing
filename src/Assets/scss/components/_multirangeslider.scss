@@ -1,0 +1,57 @@
+// Multi range slider
+.multi-range-slider {
+    @apply relative;
+    .slider {
+        @apply relative w-full;
+    }
+    .slider__track,
+    .slider__range {
+        @apply absolute;
+    }
+    .slider__track,
+    .slider__range {
+        @apply rounded-[3px] h-[3px];
+    }
+    .slider__track {
+        @apply bg-[#d5d5d5] w-full;
+    }
+    .slider__range {
+        @apply bg-darkgray;
+    }
+ 
+ 
+    .thumb,
+    .thumb::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .thumb {
+        @apply pointer-events-none absolute h-0 w-full outline-none;
+
+        &::-webkit-slider-thumb {
+            @apply bg-[#ffff] border-none rounded-[50%] cursor-pointer h-[13px] w-[13px] mt-1 relative;
+            border:1px solid #bbb;
+            pointer-events: all;
+        }
+        &::-moz-range-thumb {
+            @apply bg-[#ffff] border-none rounded-[50%] cursor-pointer h-[13px] w-[14px] mt-1 relative;
+            border:1px solid #bbb;
+            pointer-events: all;
+        }
+    }
+    .thumb--left {
+        @apply z-10;
+    }
+    .thumb--right {
+        @apply z-10;
+    }
+    .price-filter-details{
+        @apply pt-[33px]; 
+        .filter-value{
+            @apply block font-sans text-base;
+        }
+        .btn-filter{
+            @apply text-[10px] font-serif rounded-none;
+        }
+    }
+}

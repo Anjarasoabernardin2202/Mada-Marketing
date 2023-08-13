@@ -1,0 +1,535 @@
+//Process Step Style 01
+.process-step-style-01 {
+  &.process-step {
+    text-align: center;
+
+    &:hover {
+      .process-step-icon {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.11);
+        transition: var(--default-transition);
+      }
+    }
+
+    &:last-child {
+      .process-step-bfr {
+        display: none;
+      }
+    }
+
+    .process-step-content {
+      @apply inline-block mb-[28px] w-[85%] lg:w-full md:w-[70%] sm:w-[90%] xs:mb-0;
+    }
+
+    .process-step-icon {
+      @apply flex items-center justify-center;
+      margin: 0 auto 40px;
+
+      @screen sm {
+        margin: 0 auto 30px;
+      }
+    }
+  }
+
+  .process-step-number {
+    display: none;
+  }
+
+  .process-step-heading {
+    @apply font-serif mb-[10px] font-medium text-darkgray block;
+    margin-bottom: 10px;
+  }
+
+  .process-step-icon-box {
+    @apply relative text-center;
+  }
+
+  .process-step-bfr {
+    @apply block absolute top-[22%] h-[1px] w-[80px] opacity-20 bg-[#757575] xs:hidden;
+    left: calc(100% + 10px);
+    transform: translate(-50%, -50%);
+    background-color: #757575;
+  }
+
+  .process-step-icon {
+    background-color: #fff;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 7%);
+    line-height: 130px;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transition-duration: 0.5s;
+
+    i {
+      font-size: 50px;
+      background: linear-gradient(
+        to right,
+        #b783ff,
+        #b783ff,
+        #fa7cc1,
+        #ff85a6,
+        #ff9393
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &:nth-child(2) {
+    .process-step-bfr {
+      @apply md:hidden;
+    }
+  }
+}
+
+//Process Step Style 02
+.process-step-style-02 {
+  @apply inline-block;
+
+  .process-step-number {
+    @apply relative font-serif text-lg font-medium leading-[1] z-[1] text-white text-center md:mr-[40px] xs:mr-[20px];
+    span {
+      background-color: var(--base-color, #0038e3);
+      @apply relative w-[50px] h-[50px] flex justify-center items-center rounded-[50%];
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      @apply bg-mediumgray absolute;
+      height: calc(100% - 90px);
+      left: 50%;
+      min-height: 20px;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 1px;
+      bottom: 20px;
+    }
+  }
+
+  &.process-step {
+    &:hover {
+      .process-step-number {
+        color: var(--base-color, #0038e3);
+
+        span {
+          @apply bg-white;
+          border-color: var(--base-color, #0038e3);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &:last-child {
+      .process-step-bfr {
+        display: none;
+      }
+    }
+  }
+
+  .process-step-bfr {
+    @apply hidden;
+  }
+
+  .process-step-description {
+    .process-step-heading {
+      @apply text-darkgray inline-block mb-[5px] font-medium font-serif;
+    }
+
+    .process-step-content {
+      @apply w-[60%] md:w-[80%] xs:w-full;
+    }
+  }
+
+  .process-step-icon-box {
+    @apply flex relative;
+
+    div {
+      @apply text-left ml-[40px] md:ml-0;
+      margin-bottom: 3.7em;
+    }
+  }
+
+  &:last-child {
+    .process-step-number {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+//Process Step Style 03
+.process-step-style-03 {
+  &.process-step {
+    text-align: center;
+    padding: 45px 25px 0;
+
+    .process-step-heading {
+      @apply pt-[50px] mb-[10px] block font-semibold font-serif uppercase lg:mb-[10px];
+      background-image: linear-gradient(
+        to right,
+        #b93c90,
+        #a92a96,
+        #951a9d,
+        #7b10a5,
+        #5412ae
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    .process-step-bfr {
+      @apply bg-mediumgray;
+      display: block;
+      width: calc(100% + 55px);
+      height: 1px;
+      position: absolute;
+      top: 16px;
+      left: -15px;
+
+      @screen xs {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  .process-step-icon-box {
+    @apply sm:px-[25px] xs:px-0;
+    position: relative;
+
+    &:hover {
+      .process-step-number {
+        &::after {
+          height: 55px;
+          width: 55px;
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        &::before {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.3);
+        }
+      }
+    }
+  }
+
+  .process-step-number {
+    @apply text-darkgray text-[21px] font-medium relative z-[1] text-center leading-[35px] block;
+    transition: var(--default-transition);
+    transition-duration: 250ms;
+
+    &::after {
+      content: "";
+      @apply w-[55px] h-[55px] inline-block bg-white rounded-[50%] absolute -z-[15] top-1/2 left-1/2 lg:w-[56px] lg:h-[56px];
+      box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      @apply w-[60px] h-[60px] inline-block rounded-[50%] absolute -z-[15] top-1/2 left-1/2 lg:w-[56px] lg:h-[56px];
+      background-image: linear-gradient(
+        to right top,
+        #b93c90,
+        #a92a96,
+        #951a9d,
+        #7b10a5,
+        #5412ae
+      );
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+    }
+  }
+}
+
+//Process Step Style 04
+.process-step-style-04 {
+  &.process-step {
+    text-align: center;
+
+    .process-step-heading {
+      @apply font-serif block font-medium uppercase;
+      color: #374162;
+      margin: 0 0 10px;
+      padding-top: 50px;
+    }
+
+    &:hover {
+      .process-step-number {
+        &::before {
+          width: 80px;
+          height: 80px;
+        }
+
+        &::after {
+          width: 61px;
+          height: 61px;
+        }
+      }
+    }
+
+    .process-step-bfr {
+      display: block;
+      width: calc(100% + 33px);
+      height: 1px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      @apply bg-mediumgray xs:w-full xs:left-0 xs:translate-x-0;
+    }
+  }
+
+  .process-step-number {
+    font-size: 21px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    line-height: 38px;
+    display: block;
+    transition: var(--default-transition);
+    transition-duration: 250ms;
+    color: #fff;
+
+    &::after {
+      content: "";
+      width: 56px;
+      height: 56px;
+      display: inline-block;
+      background-image: linear-gradient(
+        to right top,
+        #ec606c,
+        #ee6362,
+        #ee6757,
+        #ed6c4d,
+        #eb7242
+      );
+      border-radius: 50%;
+      position: absolute;
+      z-index: -15;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      width: 72px;
+      height: 72px;
+      display: inline-block;
+      background-color: #ffded8;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -15;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .process-step-icon-box {
+    position: relative;
+
+    .process-step-description {
+      @apply sm:px-[15px];
+    }
+  }
+}
+
+//Process Step Style 05
+.process-step-style-05 {
+  .process-step-bfr {
+    @apply block sm:hidden;
+    height: 1px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    left: 75%;
+    opacity: .2;
+    top: 61px;
+    width: 60%;
+  }
+
+  .process-step-icon-box {
+    .process-step-description {
+      padding-top: 50px;
+    }
+  }
+
+  &.process-step {
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 1;
+
+    &:last-child {
+      .process-step-bfr {
+        opacity: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      .process-step-number {
+        transform: scale(1.2);
+      }
+    }
+
+    .process-step-icon-box {
+      padding: 45px 25px 0;
+    }
+  }
+
+  .process-step-heading {
+    margin-bottom: 10px;
+    font-weight: 500;
+    @apply font-serif;
+    display: block;
+    
+  }
+
+  .process-step-number {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    @apply text-lg;
+    line-height: 1;
+    transition: all 250ms ease-in-out;
+    font-weight: 500;
+    @apply font-serif;
+    color: black;
+    display: inline-block;
+
+    span {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    &::after {
+      content: "";
+      width: calc(100% + 15px);
+      height: calc(100% + 15px);
+      display: inline-block;
+      background-color: #fff;
+      opacity: 0.4;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -15;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      width: calc(100% + 30px);
+      height: calc(100% + 30px);
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -15;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.4;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+//Process Step Style 06
+.process-step-style-06 {
+  @screen md {
+    padding: 0;
+  }
+
+  .process-step-number {
+    display: none;
+  }
+
+  .process-step-heading {
+    @apply text-darkgray text-lg font-medium block md:text-xmd;
+    margin-bottom: 5px;
+    line-height: 22px;
+  }
+
+  &.process-step {
+    @screen sm {
+      margin-bottom:20px;
+    }
+    .propcess-step-containt {
+      @apply text-xmd block;
+    }
+
+    &:last-child {
+      .process-step-bfr {
+        display: none;
+      }
+    }
+  }
+
+  .process-step-icon-box {
+    @apply relative;
+
+    @screen md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    @screen xs {
+      text-align: center;
+    }
+
+    .process-step-description {
+      @apply inline-block;
+      text-align: left;
+
+      .process-step-content {
+        @apply text-xmd;
+      }
+    } 
+  }
+
+  .process-step-bfr {
+    @apply bg-mediumgray block sm:hidden left-full md:left-[92%];
+    width: 40px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @screen md {
+      flex: 1;
+      left: 225px;
+      order: 999;
+      transform: translateX(-50%);
+      right: 0;
+    }
+  }
+}

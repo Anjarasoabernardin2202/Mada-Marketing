@@ -1,0 +1,332 @@
+// Fancy text box 01
+.fancy-text-box-01 {
+  .col {
+    @apply border-r border-b xs:border-r-0;
+    &.dark {
+      .text-box-content {
+        .text-box {
+          background-color: #232323
+        }
+        .text-box-hover {
+          background: #232323;
+          span {
+            @apply text-[#fff];
+          }
+          p {
+            @apply text-[#fff];
+          }
+        }
+        .text-box {
+          span {
+            @apply text-white;
+          }
+        }
+      }
+    }
+    @apply relative p-0 overflow-hidden;
+
+    &:last-child {
+      @apply border-r-0;
+    }
+
+    .text-box-content {
+      overflow: hidden;
+
+      .text-box-hover {
+        padding: 40px 20px 40px !important;
+      }
+      .text-box,
+      .text-box-hover {
+        padding: 52px 20px 43px;
+        display: block;
+        width: 100%;
+        transition: var(--default-transition);
+        transition-duration: 0.5s;
+        text-align: center;
+      }
+
+      .text-box {
+        display: grid;
+
+        i {
+          font-size: 40px;
+          color: #8bb867;
+          margin-bottom: 15px;
+        }
+
+        span {
+          @apply text-darkgray uppercase font-medium font-serif;
+        }
+      }
+
+      &:hover {
+        .text-box {
+          color: #ff6437;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-100%);
+        }
+
+        .text-box-hover {
+          transform: translateY(0);
+        }
+      }
+
+      .text-box-hover {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        text-align: center;
+        transform: translateY(100%);
+        background: linear-gradient(to bottom, #fff, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7);
+        height: 100%;
+
+        span {
+          @apply font-medium font-serif uppercase justify-center text-center;
+          margin-bottom: 10px;
+          line-height: normal;
+          color: #2f2f2f;
+        }
+
+        p {
+          @apply mb-0 leading-[26px];
+        }
+      }
+    }
+  }
+}
+
+// Fancy text box style 02
+.fancy-text-box-02 {
+  @apply text-center justify-center;
+  .col {
+    &.dark {
+      .text-box-content {
+        background-color: #232323;
+        .text-box-wrapper {
+          .text-box {
+            span {
+              @apply text-white;
+            }
+          }
+        }
+      }
+    }
+    .text-box-content {
+      @apply bg-white overflow-hidden rounded-[6px];
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+
+      .text-box-wrapper {
+        @apply py-[17px] px-[70px] lg:px-10 md:px-16;
+        transform: translateY(25px);
+        transition: var(--default-transition);
+
+        .text-box {
+          @apply lg:pb-[25px];
+
+          span {
+            @apply font-serif text-xmd font-medium text-darkgray;
+          }
+        }
+
+        i {
+          @apply mb-[25px] block;
+          font-size: 40px;
+          transition: var(--default-transition);
+        }
+
+        p {
+          opacity: 0;
+          margin-bottom: 0;
+          transform: translateY(20px);
+          transition: var(--default-transition);
+        }
+
+        a {
+          @apply font-serif block;
+          color: #828282;
+          transition: var(--default-transition);
+
+          &:hover {
+            color: var(--base-color, #0038e3);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .text-box-wrapper {
+        transform: translateY(-30px);
+
+        i {
+          opacity: 0;
+        }
+
+        p {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// Fancy text box style 03
+.fancy-text-box-03 {
+  @apply text-center justify-center;
+  .col {
+    &.dark {
+      .text-box-content {
+        background-color: #232323;
+        .text-box {
+          .fancy-box-wrapper {
+            span {
+              @apply text-white;
+            }
+          }
+        }
+      }
+    }
+
+    .text-box {
+      .fancy-box-wrapper {
+        @apply font-sans xs:ml-[25px] xs:pl-[25px];
+        flex: 0 0 70%;
+        border-left: 1px solid #e4e4e4;
+        display: block;
+        text-align: start;
+        padding-left: 45px;
+        margin-left: 40px;
+        
+        @screen xs {
+          padding-left: 20px;
+          margin-left: 20px;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-family: Poppins,sans-serif;
+        }
+        span{
+          @apply font-serif;
+        }
+      }
+
+      span {
+        p {
+          margin-bottom: 0;
+          font-size: 15px;
+          display: block;
+          text-align: start;
+          color: #828282;
+          font-family: var(--alt-font);
+        }
+      }
+    }
+
+    .fancy-text-icon {
+      @apply mb-0;
+      font-family: var(--alt-font);
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: -1px;
+      flex: 0 0 auto;
+    }
+
+    .fancy-box-content {
+      border-left: 1px solid;
+      border-color: #e4e4e4;
+      flex: 1;
+    }
+
+    .featured-box-style2 {
+      transition-duration: 0.4s;
+    }
+
+    .text-box-content {
+      @apply p-14 lg:px-6 md:px-14 xs:p-8 bg-white;
+      border-radius: 6px;
+      transition: var(--default-transition);
+      box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+
+      &:hover {
+        transform: translate3d(0, -3px, 0);
+      }
+    }
+  }
+}
+
+// Fancy text box style 04
+.fancy-text-box-04 {
+  .col {
+    &.dark {
+      .text-box-content {
+        background-color: #232323;
+
+        .feature-box-content {
+          div {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .text-box-content {
+      transition: var(--default-transition);
+      &:hover {
+        transform: translate3d(0, -3px, 0);
+      }
+    }
+  }
+}
+
+// Facny text box style 05
+.fancy-text-box-05 {
+  @apply relative;
+  transition: all 0.5s ease-in-out;
+
+  .fancy-box-item {
+    .bg-banner-image {
+      transition-duration: 0.5s;
+      @apply absolute top-0 left-0 opacity-0 invisible h-full w-full z-0;
+    }
+    .fancy-text-box {
+      @apply relative;
+      .fancy-text-content {
+        @apply absolute top-auto left-0 bottom-0 h-auto w-full z-[9];
+        transform: translateY(70px);
+        transition: all 0.5s ease-in-out;
+
+        .fancy-text-box-bottom {
+          @apply opacity-0;
+          transform: translateY(15px);
+          transition: all 0.5s ease-in-out;
+        }
+        .feather-box-overlay {
+          @apply absolute top-0 left-0 opacity-0 h-full w-full -z-[1];
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    &:hover {
+      .bg-banner-image {
+        @apply opacity-100 visible;
+      }
+
+      .fancy-text-box {
+        .fancy-text-content {
+          transform: translateY(0);
+          background-color: var(--base-color);
+
+          .fancy-text-box-bottom {
+            @apply opacity-100;
+            transform: translateY(0);
+          }
+          .feature-box-overlay {
+            @apply opacity-100;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

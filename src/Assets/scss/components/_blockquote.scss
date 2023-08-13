@@ -1,0 +1,77 @@
+// Blockquote style 01
+.blockquote-style-01 {
+  @apply p-24 xl:p-8 md:p-20;
+
+  h6 {
+    @apply mb-[30px] w-[90%] font-serif font-medium text-white;
+  }
+
+  i {
+    @apply block text-white text-[40px] mb-[25px];
+  }
+
+  span {
+    @apply text-md font-serif text-white opacity-70 font-normal;
+  }
+}
+
+// Blockquote style 02
+.blockquote-style-02 {
+  @apply px-[40px] py-[2px] md:my-[54px] md:pl-[30px] md:pr-0 sm:my-[54px] border-l-[6px] border-solid;
+  border-color: var(--base-color);
+
+  h6 {
+    @apply text-darkgray text-lg font-medium font-serif mb-[17px] leading-[30px] tracking-[0px];
+  }
+
+  span {
+    @apply text-sm tracking-[2px] font-serif font-medium inline-block uppercase;
+  }
+}
+
+// Blockquote style 03
+.blockquote-style-03 {
+  @apply text-center;
+  i {
+    @apply text-[50px] mb-[25px] inline-block;
+  }
+
+  h6 {
+    @apply font-serif mb-[25px] text-darkgray leading-[34px] text-xlg lg:text-lg tracking-normal;
+  }
+
+  span {
+    @apply font-serif uppercase text-sm font-medium tracking-[4px];
+  }
+}
+
+// Blockquote style 04
+.blockquote-style-04 {
+  i {
+    @apply text-[32px] mb-[30px] inline-block;
+    color: var(--base-color,#0038e3);
+  }
+
+  h6 {
+    @apply font-serif text-darkgray mb-[25px] font-medium lg:mb-[15px] text-[2.30rem] leading-[3rem];
+  }
+
+  span {
+    @apply font-serif;
+  }
+}
+
+// Blockquote style 05
+.blockquote-style-05 {
+  i {
+    @apply text-[40px] mb-[30px] inline-block;
+  }
+
+  h6 {
+    @apply font-light font-serif text-white lg:mb-[15px];
+  }
+
+  span {
+    @apply text-md font-medium uppercase tracking-[2px] inline-block;
+  }
+}
